@@ -1,0 +1,110 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+nav {
+    transition: all 0.3s ease;
+}
+
+nav a {
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #4B5563;
+}
+
+section {
+    min-height: 100vh;
+    padding-top: 80px; /* Offset for fixed nav */
+}
+
+footer {
+    background-color: #1F2937;
+}
+
+footer a {
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #60A5FA;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    overflow: hidden;
+}
+
+.hero picture, .hero img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero .absolute {
+    z-index: 1; /* Ensure text overlay is above the image */
+}
+
+/* Gallery Images */
+.grid img {
+    transition: opacity 0.3s ease;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 3/2; /* Maintain aspect ratio */
+}
+
+/* Prevent layout shift */
+.grid picture {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 640px) {
+    nav .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav .space-x-4 {
+        margin-top: 1rem;
+    }
+
+    nav .space-x-4 a {
+        margin: 0 0.5rem;
+        display: inline-block;
+        padding: 0.5rem 0;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    section {
+        padding-top: 120px; /* Adjust for taller nav on mobile */
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width: 641px) and (max-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
