@@ -3,6 +3,7 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.6;
+    scroll-behavior: smooth;
 }
 
 nav {
@@ -53,23 +54,69 @@ footer a:hover {
     z-index: 1; /* Ensure text overlay is above the image */
 }
 
-/* Gallery Images */
-.grid img {
+/* Gallery Section */
+.gallery-section {
+    position: relative;
+    background-color: #111827; /* Fallback background color */
+}
+
+.gallery-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw; /* Full viewport width */
+    height: 100vh; /* Full viewport height */
+    filter: blur(10px);
+    z-index: 0;
+}
+
+.gallery-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.gallery-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw; /* Full viewport width */
+    height: 100vh; /* Full viewport height */
+    background: rgba(0, 0, 0, 0.5); /* Dark shade overlay */
+    z-index: 1;
+}
+
+/* Gallery Grid (Google Photos style, 2-3 photos per row) */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on small screens */
+    gap: 4px; /* Minimal gap like Google Photos */
+    grid-auto-flow: dense;
+}
+
+.gallery-grid img {
     transition: opacity 0.3s ease;
     object-fit: cover;
     width: 100%;
-    height: 100%;
-    aspect-ratio: 3/2; /* Maintain aspect ratio */
+    height: auto; /* Allow natural height */
+    display: block;
+    border-radius: 4px;
 }
 
 /* Prevent layout shift */
-.grid picture {
+.gallery-grid picture {
     display: block;
     width: 100%;
-    height: 100%;
 }
 
 /* Responsive Adjustments */
+@media (min-width: 640px) {
+    .gallery-grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns on larger screens */
+    }
+}
+
 @media (max-width: 640px) {
     nav .container {
         flex-direction: column;
@@ -96,15 +143,5 @@ footer a:hover {
 
     section {
         padding-top: 120px; /* Adjust for taller nav on mobile */
-    }
-
-    .grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-@media (min-width: 641px) and (max-width: 768px) {
-    .grid {
-        grid-template-columns: repeat(2, 1fr);
     }
 }

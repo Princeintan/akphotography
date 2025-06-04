@@ -22,49 +22,56 @@
     </nav>
 
     <!-- Gallery Section -->
-    <section class="container mx-auto px-4 py-16 pt-24">
-        <h2 class="text-3xl font-bold text-center mb-8">Our Gallery</h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-            <picture>
-                <source srcset="Images/bride1.webp" type="image/webp">
-                <img src="Images/bride1.JPG" alt="Bride 1" width="600" height="400" class="w-full h-64 object-cover rounded hover:opacity-75" loading="lazy" sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33.33vw">
-            </picture>
-            <picture>
-                <source srcset="Images/bride2.webp" type="image/webp">
-                <img src="Images/bride2.JPG" alt="Bride 2" width="600" height="400" class="w-full h-64 object-cover rounded hover:opacity-75" loading="lazy" sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33.33vw">
-            </picture>
-            <picture>
-                <source srcset="Images/bride3.webp" type="image/webp">
-                <img src="Images/bride3.JPG" alt="Bride 3" width="600" height="400" class="w-full h-64 object-cover rounded hover:opacity-75" loading="lazy" sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33.33vw">
-            </picture>
-            <picture>
-                <source srcset="Images/groom_bride1.webp" type="image/webp">
-                <img src="Images/groom_bride1.JPG" alt="Groom and Bride 1" width="600" height="400" class="w-full h-64 object-cover rounded hover:opacity-75" loading="lazy" sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33.33vw">
-            </picture>
-            <picture>
-                <source srcset="Images/groom_bride2.webp" type="image/webp">
-                <img src="Images/groom_bride2.JPG" alt="Groom and Bride 2" width="600" height="400" class="w-full h-64 object-cover rounded hover:opacity-75" loading="lazy" sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33.33vw">
-            </picture>
-            <picture>
-                <source srcset="Images/haldi1.webp" type="image/webp">
-                <img src="Images/haldi1.JPG" alt="Haldi Ceremony 1" width="600" height="400" class="w-full h-64 object-cover rounded hover:opacity-75" loading="lazy" sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33.33vw">
-            </picture>
-            <picture>
-                <source srcset="Images/haldi2.webp" type="image/webp">
-                <img src="Images/haldi2.JPG" alt="Haldi Ceremony 2" width="600" height="400" class="w-full h-64 object-cover rounded hover:opacity-75" loading="lazy" sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33.33vw">
-            </picture>
-            <picture>
+    <section class="gallery-section relative min-h-screen">
+        <picture class="gallery-bg">
+            <source srcset="Images/bride1.webp" type="image/webp">
+            <img src="Images/bride1.JPG" alt="Gallery Background" width="1600" height="900" class="w-full h-full object-cover">
+        </picture>
+        <div class="gallery-overlay"></div>
+        <div class="container mx-auto px-4 py-16 pt-24 relative z-10">
+            <h2 class="text-3xl font-bold text-center mb-8 text-white">Our Gallery</h2>
+            <div class="gallery-grid">
+                <picture>
+                    <source srcset="Images/bride1.webp" type="image/webp">
+                    <img src="Images/bride1.JPG" alt="Bride 1" width="600" height="400" class="w-full object-cover rounded hover:opacity-75" loading="lazy">
+                </picture>
+                <picture>
+                    <source srcset="Images/bride2.webp" type="image/webp">
+                    <img src="Images/bride2.JPG" alt="Bride 2" width="600" height="400" class="w-full object-cover rounded hover:opacity-75" loading="lazy">
+                </picture>
+                <picture>
+                    <source srcset="Images/bride3.webp" type="image/webp">
+                    <img src="Images/bride3.JPG" alt="Bride 3" width="600" height="400" class="w-full object-cover rounded hover:opacity-75" loading="lazy">
+                </picture>
+                <picture>
+                    <source srcset="Images/groom_bride1.webp" type="image/webp">
+                    <img src="Images/groom_bride1.JPG" alt="Groom and Bride 1" width="600" height="400" class="w-full object-cover rounded hover:opacity-75" loading="lazy">
+                </picture>
+                <picture>
+                    <source srcset="Images/groom_bride2.webp" type="image/webp">
+                    <img src="Images/groom_bride2.JPG" alt="Groom and Bride 2" width="600" height="400" class="w-full object-cover rounded hover:opacity-75" loading="lazy">
+                </picture>
+                <picture>
+                    <source srcset="Images/haldi1.webp" type="image/webp">
+                    <img src="Images/haldi1.JPG" alt="Haldi Ceremony 1" width="600" height="400" class="w-full object-cover rounded hover:opacity-75" loading="lazy">
+                </picture>
+                <picture>
+                    <source srcset="Images/haldi2.webp" type="image/webp">
+                    <img src="Images/haldi2.JPG" alt="Haldi Ceremony 2" width="600" height="400" class="w-full objectcover rounded hover:opacity-75" loading="lazy">
+                </picture>
+                <picture>
                 <source srcset="Images/bride4.webp" type="image/webp">
-                <img src="Images/haldi4.JPG" alt="Bride picture 4" width="600" height="400" class="w-full h-64 object-cover rounded hover:opacity-75" loading="lazy" sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33.33vw">
+                <img src="Images/haldi4.JPG" alt="Bride picture 4" width="600" height="400" class="w-full h-64 object-cover rounded hover:opacity-75" loading="lazy">
             </picture>
             <picture>
                 <source srcset="Images/bride6.webp" type="image/webp">
-                <img src="Images/bride6.JPG" alt="Bride looking from Window" width="600" height="400" class="w-full h-64 object-cover rounded hover:opacity-75" loading="lazy" sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33.33vw">
+                <img src="Images/bride6.JPG" alt="Bride looking from Window" width="600" height="400" class="w-full h-64 object-cover rounded hover:opacity-75" loading="lazy">
             </picture>
             <picture>
                 <source srcset="Images/haldi3.webp" type="image/webp">
-                <img src="Images/haldi3.JPG" alt="Haldi Ceremony 3" width="600" height="400" class="w-full h-64 object-cover rounded hover:opacity-75" loading="lazy" sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33.33vw">
+                <img src="Images/haldi3.JPG" alt="Haldi Ceremony 3" width="600" height="400" class="w-full h-64 object-cover rounded hover:opacity-75" loading="lazy">
             </picture>
+            </div>
         </div>
     </section>
 
